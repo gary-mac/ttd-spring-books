@@ -39,5 +39,4 @@ class BookControllerTest {
 				.contentType(MediaType.APPLICATION_JSON)
 		).andExpect(jsonPath("$", hasSize(1))).andDo(print());
 	}
-
 }
