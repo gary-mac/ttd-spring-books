@@ -47,7 +47,7 @@ class BookControllerTest {
 	}
 
 	@Test
-	void successfullyCreateAToDo() throws Exception {
+	void successfullyCreateABook() throws Exception {
 		Book book = new Book("Book title", "Author", "3434");
 		when(bookService.save(any(Book.class))).thenReturn(book);
 
