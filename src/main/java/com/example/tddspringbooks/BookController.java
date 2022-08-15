@@ -20,4 +20,9 @@ public class BookController {
     ResponseEntity<List<Book>> getAllToDos() {
         return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
     }
+
+    @PostMapping("/books")
+    ResponseEntity<Book> create(@RequestBody Book book) {
+        return new ResponseEntity<>(bookService.save(book), HttpStatus.CREATED);
+    }
 }

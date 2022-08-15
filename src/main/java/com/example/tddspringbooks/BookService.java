@@ -9,7 +9,6 @@ import java.util.List;
 @Service
 public class BookService {
 
-
     BookRepository bookRepository;
 
     public BookService(BookRepository bookRepository) {
@@ -18,5 +17,9 @@ public class BookService {
 
     public List<Book> findAll() {
         return bookRepository.findAll();
+    }
+
+    public Book save(Book book) {
+        return new Book();
     }
 }
