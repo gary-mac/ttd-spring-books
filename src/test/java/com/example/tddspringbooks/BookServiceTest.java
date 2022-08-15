@@ -23,6 +23,7 @@ public class BookServiceTest {
 
         Book firstBook = toDoService.findAll().get(0);
 
+        assertEquals(book.getId(), firstBook.getId());
         assertEquals(book.getTitle(), firstBook.getTitle());
         assertEquals(book.getAuthor(), firstBook.getAuthor());
         assertEquals(book.getIsbn(), firstBook.getIsbn());
