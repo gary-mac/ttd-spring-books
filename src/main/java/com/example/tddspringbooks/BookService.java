@@ -20,6 +20,6 @@ public class BookService {
     }
 
     public Book save(Book book) {
-        return new Book();
+        return bookRepository.save(book);
     }
 }
