@@ -22,12 +22,12 @@ public class BookServiceTest {
     }
 
     @Test
-    void getAllToDos(){
+    void getAllBooks(){
         Book book = new Book("Clean Code", "Robert Martin", "2234");
         bookRepository.save(book);
-        BookService toDoService = new BookService(bookRepository);
+        BookService bookService = new BookService(bookRepository);
 
-        Book firstBook = toDoService.findAll().get(0);
+        Book firstBook = bookService.findAll().get(0);
 
         assertEquals(book.getId(), firstBook.getId());
         assertEquals(book.getTitle(), firstBook.getTitle());
@@ -36,11 +36,11 @@ public class BookServiceTest {
     }
 
     @Test
-    void saveAToDo() {
+    void saveABook() {
         BookService bookService = new BookService(bookRepository);
-        Book todoSample = new Book("Good Food", "Mick Martins", "3234");
+        Book bookSample = new Book("Good Food", "Mick Martins", "3234");
 
-        bookService.save(todoSample);
+        bookService.save(bookSample);
 
         assertEquals(1.0, bookRepository.count());
     }
